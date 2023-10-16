@@ -1,0 +1,67 @@
+<h1> Student Details</h1>
+<table>
+
+  <tr>
+    
+    <th scope="col">Name</th>
+    <th scope="col">Roll</th>
+    <th scope="col">Address</th>
+    <th scope="col">Email</th>
+     <th>Action</th>
+  </tr>
+<% @students.each do |student| %>
+
+  <tr>
+     <td> <%= student.name%></td>
+     <td> <%= student.roll%></td>
+     <td> <%= student.address%></td>
+     <td> <%= student.email%> </td>
+    <td><%= link_to "View", student %> 
+        <%= link_to "Edit", edit_student_path(student) %>
+    </td>
+</tr>
+  <% end %>
+
+ </table>
+ <footer>
+  <p>Author: My Self<br>
+  <a href="mailto:hege@example.com">Shaynasingh@example.com</a></p>
+</footer>
+
+ <style>
+ *{
+    margin:0px;
+    padding:0px;
+ }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  /* background-color:pink; */
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+h1{
+text-align:center;
+background-color:DarkSalmon;
+text-align: center;
+height:60px;
+color: white;
+
+}
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+ </style>
+

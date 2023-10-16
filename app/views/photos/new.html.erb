@@ -1,0 +1,26 @@
+<h1>Photos file</h1>
+
+<%= form_with model: @photo do |form| %>
+  <div>
+    <%= form.label :name  %><br>
+    <%= form.text_field :name  %>
+    <% @photo.errors.full_messages_for(:name ).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :size %><br>
+    <%= form.text_area :size %><br>
+    <% @photo.errors.full_messages_for(:size).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+    
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+

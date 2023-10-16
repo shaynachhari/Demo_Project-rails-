@@ -1,0 +1,6 @@
+<h3>Update Photo Details</h3>
+<%= form_with model: @photo do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :size, placeholder: "size" %>
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,10 @@
+<h3>Update Student Details</h3>
+<%= form_with model: @student do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :roll, placeholder: "roll" %>
+  <%= form.text_field :address, placeholder: "address" %>
+  <%= form.text_field :email, placeholder: "email" %>
+
+
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,41 @@
+<h1>New student</h1>
+
+<%= form_with model: @student do |form| %>
+  <div>
+    <%= form.label :name  %><br>
+    <%= form.text_field :name  %>
+    <% @student.errors.full_messages_for(:name ).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :roll %><br>
+    <%= form.text_field :roll %><br>
+    <% @student.errors.full_messages_for(:roll).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+    <div>
+    <%= form.label :address  %><br>
+    <%= form.text_field :address  %>
+    <% @student.errors.full_messages_for(:address ).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.email_field :email %><br>
+    <% @student.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+

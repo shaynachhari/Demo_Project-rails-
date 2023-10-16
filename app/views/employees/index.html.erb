@@ -1,0 +1,27 @@
+<h1> i am employee</h1>
+
+<ul>
+  <% @employees.each do |employee| %>
+    <li>
+      <%= employee.name%>
+      <br>
+       <%= employee.age%>
+      <br>
+
+
+      <%# use watch  'a tag'%>
+      <a href="employees/<%= employee.id%>">
+        <%= employee.name%>
+
+        <br>
+
+        <%# use watch 'link tag' %>
+        <%= link_to employee.age, employee%>
+
+
+
+
+    </li>
+   <% end %>
+</ul> 
+

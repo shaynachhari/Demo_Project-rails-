@@ -1,0 +1,40 @@
+<h1>I Am Student</h1>
+<p> It is commonly stated that a person’s student years are the most formative years of their lives. </p>
+
+<ul> 
+  <% @students.each do |student| %>
+    <li> 
+      <%= student.name%>
+      <br>
+      
+      <%= student.roll%>
+      <br>
+
+      <%= student.address%>
+      <br>
+
+      <%= student.email%>
+      <br>
+      
+
+
+      <%# use show %>
+      <a href="student/ <%= student.id %>">
+      <%= student.name%>
+      <br>
+      <%= student.roll%>
+      <br>
+      <%= student.address%>
+      <br>
+      <%= student.email%>
+      </a>
+
+
+      
+
+
+    </li>
+  <% end %>
+</ul>
+<%# use new path of student %>
+<%# <% link_to "New Student" ,"Students#new+"  %>
