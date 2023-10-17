@@ -1,4 +1,8 @@
-<h1> Student Details</h1>
+<h1> Student Details
+   
+</h1>
+
+
 <table>
 
   <tr>
@@ -9,6 +13,7 @@
     <th scope="col">Email</th>
      <th>Action</th>
   </tr>
+   <%= link_to "new", student_new_path %> 
 <% @students.each do |student| %>
 
   <tr>
@@ -18,8 +23,12 @@
      <td> <%= student.email%> </td>
     <td><%= link_to "View", student %> 
         <%= link_to "Edit", edit_student_path(student) %>
+        <%=  button_to 'Delete', delete_student_path(student), data: {  turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"} , method: :delete%>
+
     </td>
 </tr>
+
   <% end %>
 
  </table>
@@ -62,6 +71,22 @@ footer {
   padding: 3px;
   background-color: DarkSalmon;
   color: white;
+}
+button {
+  border: none;
+  background-color:blue;
+
+  color:white;
+  padding: 2px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /* margin: 4px 2px; */
+  cursor: pointer;
+}
+button:hover{
+  background-color:red;
 }
  </style>
 

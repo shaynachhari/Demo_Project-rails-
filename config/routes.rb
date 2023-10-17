@@ -1,20 +1,15 @@
 Rails.application.routes.draw do
-
-  # get 'employee/:id',to: "employees#watch"
-  # get 'employee/', to: "employees#index"
-
   root 'student#index'
-  get 'student', to: "students#index" 
-  get 'student/:id', to: "students#show"
+  get 'students', to: "students#index" ,as:'students'
+  get 'students/:id', to: "students#show" , as:'student'
   get 'student/new',to: "students#new"
 
-  post 'student/', to: 'students#create'
-  get 'student/:id/edit', to: 'students#edit', as:'edit_student'
-  patch 'student/:id', to: 'students#update'
-  
+  post 'students/', to: 'students#create'
+  get 'students/:id/edit', to: 'students#edit', as:'edit_student'
+  put 'student/:id', to: 'students#update'
+  delete 'students/:id', to: 'students#destroy', as: 'delete_student'
   # resources  :students
-
-
+  
   #  use of CRUD
   get 'photos', to: 'photos#index', as: 'photos'
   get 'photos/:id', to: 'photos#show', as: 'photo'

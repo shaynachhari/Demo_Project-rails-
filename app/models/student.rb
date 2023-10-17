@@ -6,10 +6,7 @@ class Student < ApplicationRecord
     validates :roll, presence: true,numericality: { only_integer: true }
     validates :address, presence: true, length: {maximum: 50, minimum: 8}
 
-    # callbask-before
-    # before_validation do
-    #     puts "hello"
-    # end
+    
 
     
 end

@@ -55,10 +55,7 @@ class Photo < ApplicationRecord
         puts "You have Touch an object"
     end
 
-    # after_rollback do 
-    #     puts "This is a rollback"
-    # end
-
+    
     
     
 
