@@ -41,23 +41,30 @@ class StudentsController < ApplicationController
     end
   end
 
+
   #delete with the help of destroy
   def destroy 
   @student = Student.find(params[:id])
   # @student.destroy
   if @student.destroy
   redirect_to student_path
-  TestingMailer.delete_ac(@student).deliver_now
+  # TestingMailer.delete_ac(@student).deliver_now
   else
-     render @student.errors
+     render @student
   end
  end
 
   private 
   def article_params
-    params.require(:student).permit(:name, :roll, :address, :email)
+    params.require(:student).permit(:name, :roll, :address, :email, :profile_image)
   end 
+
+
+
+
 end
+
+
 
 
 

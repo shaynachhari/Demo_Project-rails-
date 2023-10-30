@@ -4,10 +4,17 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to this web page, <%= @name.name %></h1>
-    <p>
+    <h1>Welcome to this web page, <%= @student.name %></h1>
+
+    <p>Here is an image for you:</p>
+    <%= image_tag @student.profile_image, alt: "Profile Image" %>
+      
+    
+      
+
+      <p>
       You have successfully signed up to our website,
-      your username is: <%= @name.email%>.<br>
+      your username is: <%= @student.email%>.<br>
     </p>
     <p>
       To login to the site, just follow this link: <%= @url %>.

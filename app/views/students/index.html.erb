@@ -5,18 +5,27 @@
 
 <table>
 
+   <%= link_to "new", student_new_path %>
+   
   <tr>
-    
+     
+    <th scope="col">Image</th>
     <th scope="col">Name</th>
     <th scope="col">Roll</th>
     <th scope="col">Address</th>
     <th scope="col">Email</th>
      <th>Action</th>
   </tr>
-   <%= link_to "new", student_new_path %> 
 <% @students.each do |student| %>
 
   <tr>
+        
+      <td> <%= image_tag student.profile_image,style: 'height:100%;width:auto;' %></td>
+      
+    
+
+
+      
      <td> <%= student.name%></td>
      <td> <%= student.roll%></td>
      <td> <%= student.address%></td>
@@ -88,5 +97,9 @@ button {
 button:hover{
   background-color:red;
 }
+td,image_tag{
+  height:100px;
+}
+
  </style>
 
