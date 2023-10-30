@@ -6,7 +6,7 @@ class PhotosController < ApplicationController
   def show
   @photo = Photo.find(params[:id])
   end
-  
+  #tgufghj
   # //show only form
   def new 
     # byebug
