@@ -9,7 +9,7 @@
    
   <tr>
      
-    <th scope="col">Image</th>
+    <%# <th scope="col">Image</th> %>
     <th scope="col">Name</th>
     <th scope="col">Roll</th>
     <th scope="col">Address</th>
@@ -20,7 +20,7 @@
 
   <tr>
         
-      <td> <%= image_tag student.profile_image,style: 'height:100%;width:auto;' %></td>
+      <%# <td> <%= image_tag student.profile_image,style: 'height:100%;width:auto;'</td %>
       
     
 
@@ -30,6 +30,8 @@
      <td> <%= student.roll%></td>
      <td> <%= student.address%></td>
      <td> <%= student.email%> </td>
+      
+
     <td><%= link_to "View", student %> 
         <%= link_to "Edit", edit_student_path(student) %>
         <%=  button_to 'Delete', delete_student_path(student), data: {  turbo_method: :delete,
@@ -69,7 +71,7 @@ tr:nth-child(even) {
 }
 h1{
 text-align:center;
-background-color:DarkSalmon;
+background-color: rgba(50, 115, 220, 0.3);
 text-align: center;
 height:60px;
 color: white;
@@ -78,7 +80,8 @@ color: white;
 footer {
   text-align: center;
   padding: 3px;
-  background-color: DarkSalmon;
+  /* background-color: DarkSalmon; */
+  background-color: rgba(50, 115, 220, 0.3);
   color: white;
 }
 button {

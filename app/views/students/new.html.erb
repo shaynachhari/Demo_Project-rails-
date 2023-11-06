@@ -33,13 +33,13 @@
     <% end %>
   </div>
 
-   <div>
-    <%= form.label :profile_image %><br>
-    <%= form.file_field :profile_image %><br>
-    <% @student.errors.full_messages_for(:profile_image).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+   <%# <div>
+    <%= form.label :profile_image %>
+    <%# <%= form.file_field :profile_image %>
+    <%# <% @student.errors.full_messages_for(:profile_image).each do |message| %> 
+      <%# <><%= message %>
+    <%# <% end %> 
+  <%# </div> %> 
 
   <div><br>
     <%= form.submit %>
