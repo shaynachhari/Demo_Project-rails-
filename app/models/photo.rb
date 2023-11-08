@@ -4,16 +4,25 @@ class Photo < ApplicationRecord
     # validates :name, presence: { strict: true }
     # validates :name, presence: true
     # validates :name, presence:{ message: "must be given please" }
-    validates :size, presence: true,numericality: { only_integer: true },length: { is: 2 }
+    # validates :size, presence: true,numericality: { only_integer: true },length: { is: 2 }
     # Use custom validations 
-    validate :name_length
+    # validate :name_length
     
-    private
-    def name_length
-       if name.length < 5
-         errors.add(:name, "must be at least 5 characters long")
-       end
-    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     
    #callbacks (Creating an Object)
     before_validation :call_back
